@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 // 引入四个页面
 import Home from '@/Home.vue'
 import Explorer from '@/Explorer.vue'
@@ -13,7 +12,7 @@ export default new Router({
   mode: 'history',
   base: __dirname,
   routes: [
-   {
+    {
       path: '/',
       name: 'Home',
       component: Home
