@@ -29,7 +29,7 @@
             </li>
             </ul>
         </div>
-        <div class="content">
+        <div class="content" name="slide-fade">
              <!-- 用router-view 渲染视图 -->
             <router-view></router-view>
         </div>
@@ -41,4 +41,16 @@ export default {}
 </script>
 
 <style>
+.slide-fade-enter-active{
+  transition: all .9s ease;
+}
+
+.slide-fade-leave-active{
+  transition: all .9s cubic-bezier(1.0,0.5,0.8,1.0)
+}
+
+.slide-fade-enter,.slide-fade-leave-active{
+  transform: translateX(-430px);
+  opacity: 0;
+}
 </style>
