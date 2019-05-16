@@ -1,12 +1,15 @@
 <template>
     <div>
+        <transition class="content" name="slide-fade">
+             <!-- 用router-view 渲染视图 -->
+            <router-view></router-view>
+        </transition>
         <div class="tabs">
             <ul>
             <li>
                 <!-- 使用 router-link指向定义的path -->
-                <router-link :to="{ name : 'Home' }" tag="li">
-                    <div></div>
-                    <div>首页</div>
+                <router-link :to="{ name : 'Home' }" tag="li" active-class="active">
+                    <img class="img" src="../assets/images/home.svg" alt="首页">
                 </router-link>
             </li>
             <li>
@@ -29,10 +32,6 @@
             </li>
             </ul>
         </div>
-        <div class="content" name="slide-fade">
-             <!-- 用router-view 渲染视图 -->
-            <router-view></router-view>
-        </div>
     </div>
 </template>
 
@@ -52,5 +51,10 @@ export default {}
 .slide-fade-enter,.slide-fade-leave-active{
   transform: translateX(-430px);
   opacity: 0;
+}
+
+.img{
+    width: 23px;
+    height: 23px;
 }
 </style>
