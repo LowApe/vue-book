@@ -1,5 +1,5 @@
 <template>
-  <transition name="slide-fade">
+  <transition >
       <!-- 用router-view 渲染视图 -->
       <router-view></router-view>
   </transition>

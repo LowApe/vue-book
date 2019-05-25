@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition class="content" name="slide-fade">
+        <transition  name="slide-fade">
              <!-- 用router-view 渲染视图 -->
             <router-view></router-view>
         </transition>
@@ -25,7 +25,7 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/me" tag="li">
+                <router-link :to="{name : 'Me'}" tag="li">
                     <div></div>
                     <div>我</div>
                 </router-link>
