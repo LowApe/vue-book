@@ -9,6 +9,17 @@
     <div class="section">
       <div>
         <!-- 热门推荐 -->
+        <!-- Swiper -->
+        <div class="swiper-container" ref="slider">
+          <div class="swiper-wrapper"
+           v-for="slide in slides" v-bind:key="slide">
+            <router-link class="swiper-slide" tag="div" :to="{name: 'BookDetail',params:{id:slide.id}}">
+              <img :src="slide.img_url" alt=""/>
+            </router-link>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
         <!-- 快讯 -->
       </div>
     </div>
@@ -26,7 +37,31 @@
 </template>
 
 <script>
-export default {}
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.css'
+export default {
+  data () {
+    return {
+      slides: [
+        {id: 1, img_url: '../assets/images/home.svg'},
+        {id: 2, img_url: '../assets/logo.png'}
+      ]
+    }
+  },
+  // 不要选择 created 钩子应该采用 mounted
+  // 否则 Swiper 不能生效,因为 created 调用时元素还没挂载到 DOM 上
+  mounted () {
+    // eslint-disable-next-line
+    new Swiper(this.$refs.slider, { 
+      pagination: this.$refs.pagination,
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false
+    })
+  }
+}
 </script>
 
 <style>
