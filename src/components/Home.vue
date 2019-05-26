@@ -33,57 +33,17 @@
     <div class="section">
       <div>
         <!-- 新书上架 -->
-        <div class="book-list">
-            <div class="header">
-                <div class="heading">最新更新</div>
-                <div class="more">更多...</div>
-            </div>
-
-            <div class="book-items">
-                <div class="book">
-                    <div class="cover"><img src="../assets/logo.png" alt="1"></div>
-                    <div class="titile">Android</div>
-                    <div class="authors">曲</div>
-                </div>
-                <div class="book">
-                    <div class="cover"><img src="../assets/logo.png" alt="1"></div>
-                    <div class="titile">Android</div>
-                    <div class="authors">曲</div>
-                </div>
-                <div class="book">
-                    <div class="cover"><img src="../assets/logo.png" alt="1"></div>
-                    <div class="titile">Android</div>
-                    <div class="authors">曲</div>
-                </div>
-                <div class="book">
-                    <div class="cover"><img src="../assets/logo.png" alt="1"></div>
-                    <div class="titile">Android</div>
-                    <div class="authors">曲</div>
-                </div>
-            </div>
-        </div>
+         <book-list :books="latesetUpdated"
+        heading="新书推荐"
+        @onBookSelect="preview($event)"></book-list>
       </div>
     </div>
     <div class="section">
-      <div>
-        <!-- 编辑推荐 -->
-        <div class="book-list">
-            <div class="header">
-                <div class="heading">编辑推荐</div>
-                <div class="more">更多...</div>
-            </div>
-            <div class="book-items">
-                 <div class="book"
-                 v-for="book in recommended"
-                 :key="book.id">
-                    <div class="cover">
-                        <img  :src="book.img_url" alt="1"></div>
-                    <div class="titile">{{book.title}}</div>
-                    <div class="authors">{{book.authors | join}}</div>
-                </div>
-            </div>
-        </div>
-      </div>
+         <!-- 编辑推荐 -->
+        <book-list :books="recommended"
+        heading="编辑推荐"
+        @onBookSelect="preview($event)"
+        ></book-list>
     </div>
   </div>
 </template>
@@ -91,6 +51,7 @@
 <script>
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.css'
+import Booklist from '../components/Booklist'
 export default {
   data () {
     return {
@@ -103,19 +64,31 @@ export default {
         {
           id: 1,
           titile: 'android1',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         },
         {
           id: 2,
           titile: 'android2',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         },
         {
           id: 2,
           titile: 'android3',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         }
       ],
@@ -123,22 +96,42 @@ export default {
         {
           id: 1,
           titile: 'android1',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         },
         {
           id: 2,
           titile: 'android2',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         },
         {
-          id: 2,
+          id: 3,
           titile: 'android3',
-          authors: 'qu',
+          authors: [
+            '啊所达到',
+            '啊所',
+            '达到'
+          ],
           img_url: require('@/assets/logo.png')
         }
       ]
+    }
+  },
+  components: {
+    'book-list': Booklist
+  },
+  methods: {
+    preview (book) {
+      alert('显示图书详情')
     }
   },
   // 不要选择 created 钩子应该采用 mounted
