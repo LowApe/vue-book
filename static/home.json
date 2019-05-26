@@ -1,0 +1,77 @@
+{
+    "announcement": "今日上架的图书全部八折",
+    "slides": [
+        {
+            "id": 1,
+            "img_url": require("@/assets/logo.png")
+        },
+        {
+            "id": 2,
+            "img_url": require("@/assets/images/home.svg")
+        }
+    ],
+    "latesetUpdated": [
+        {
+            "id": 1,
+            "titile": "android1",
+            "authors": [
+                "啊所达到",
+                "啊所",
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        },
+        {
+            "id": 2,
+            "titile": "android2",
+            "authors": [
+                "啊所达到",
+                "啊所",
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        },
+        {
+            "id": 2,
+            "titile": "android3",
+            "authors": [
+                "啊所达到",
+                "啊所",
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        }
+    ],
+    "recommended": [
+        {
+            "id": 1,
+            "titile": "android1",
+            "authors": [
+                "啊所达到",
+                "啊所",
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        },
+        {
+            "id": 2,
+            "titile": "android2",
+            "authors": [
+                "啊所达到",
+                "啊所",
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        },
+        {
+            "id": 3,
+            "titile": "android3",
+            "authors": [
+                啊所达到",
+                啊所,
+                "达到"
+            ],
+            "img_url": require("@/assets/logo.png")
+        }
+    ]
+}

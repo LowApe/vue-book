@@ -55,75 +55,10 @@ import Booklist from '../components/Booklist'
 export default {
   data () {
     return {
-      announcement: '今日上架的图书全部八折',
-      slides: [
-        {id: 1, img_url: require('@/assets/logo.png')},
-        {id: 2, img_url: require('@/assets/images/home.svg')}
-      ],
-      latesetUpdated: [
-        {
-          id: 1,
-          titile: 'android1',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        },
-        {
-          id: 2,
-          titile: 'android2',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        },
-        {
-          id: 2,
-          titile: 'android3',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        }
-      ],
-      recommended: [
-        {
-          id: 1,
-          titile: 'android1',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        },
-        {
-          id: 2,
-          titile: 'android2',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        },
-        {
-          id: 3,
-          titile: 'android3',
-          authors: [
-            '啊所达到',
-            '啊所',
-            '达到'
-          ],
-          img_url: require('@/assets/logo.png')
-        }
-      ]
+      announcement: '',
+      slides: [],
+      latesetUpdated: [],
+      recommended: []
     }
   },
   components: {
@@ -133,6 +68,14 @@ export default {
     preview (book) {
       alert('显示图书详情')
     }
+  },
+  created () {
+    this.$http.get('/home.json').then(res => {
+      this.announcement = res.body.announcement
+      this.slides = res.body.slides
+      this.latesetUpdated = res.body.latesetUpdated
+      this.recommended = res.body.recommended
+    })
   },
   // 不要选择 created 钩子应该采用 mounted
   // 否则 Swiper 不能生效,因为 created 调用时元素还没挂载到 DOM 上

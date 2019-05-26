@@ -27,6 +27,87 @@ npm run e2e
 
 # run all tests
 npm test
+
+# 请求地址
+
+HTTP GET '/api/home'
+
+# 返回对象
+{
+    announcement: '今日上架的图书全部八折', // 快讯的内容
+    slides: [           // 热门推荐图书
+    {id: 1, img_url: require('@/assets/logo.png')},
+    {id: 2, img_url: require('@/assets/images/home.svg')}
+    ],
+    latesetUpdated: [           // 新书上交
+    {
+        id: 1,                  //编号
+        titile: 'android1',     //书名
+        authors: [              //作者
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png') //图书图片
+    },
+    {
+        id: 2,
+        titile: 'android2',
+        authors: [
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png')
+    },
+    {
+        id: 2,
+        titile: 'android3',
+        authors: [
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png')
+    }
+    ],
+    recommended: [
+    {
+        id: 1,
+        titile: 'android1',
+        authors: [
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png')
+    },
+    {
+        id: 2,
+        titile: 'android2',
+        authors: [
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png')
+    },
+    {
+        id: 3,
+        titile: 'android3',
+        authors: [
+        '啊所达到',
+        '啊所',
+        '达到'
+        ],
+        img_url: require('@/assets/logo.png')
+    }
+    ]
+}
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
