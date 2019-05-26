@@ -70,7 +70,8 @@ export default {
     }
   },
   created () {
-    this.$http.get('/home.json').then(res => {
+    this.$http.get('static/data.json').then(res => {
+      console.log(res.body)
       this.announcement = res.body.announcement
       this.slides = res.body.slides
       this.latesetUpdated = res.body.latesetUpdated

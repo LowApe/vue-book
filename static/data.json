@@ -3,11 +3,11 @@
     "slides": [
         {
             "id": 1,
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         },
         {
             "id": 2,
-            "img_url": require("@/assets/images/home.svg")
+            "img_url": "static/home.svg"
         }
     ],
     "latesetUpdated": [
@@ -19,7 +19,7 @@
                 "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         },
         {
             "id": 2,
@@ -29,7 +29,7 @@
                 "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         },
         {
             "id": 2,
@@ -39,7 +39,7 @@
                 "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         }
     ],
     "recommended": [
@@ -51,7 +51,7 @@
                 "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         },
         {
             "id": 2,
@@ -61,17 +61,17 @@
                 "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         },
         {
             "id": 3,
             "titile": "android3",
             "authors": [
-                啊所达到",
-                啊所,
+                "啊所达到",
+                "啊所",
                 "达到"
             ],
-            "img_url": require("@/assets/logo.png")
+            "img_url": "static/logo.png"
         }
     ]
 }

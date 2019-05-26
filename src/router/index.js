@@ -9,7 +9,6 @@ import BookDetails from '@/components/BookDetails.vue'
 import Main from '@/components/Main.vue'
 // 使用路由实例插件
 Vue.use(Router)
-
 export default new Router({
   mode: 'history',
   base: __dirname,

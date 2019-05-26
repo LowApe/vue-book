@@ -30,7 +30,7 @@ npm test
 
 # 请求地址
 
-HTTP GET '/api/home'
+HTTP GET '/static/data'
 
 # 返回对象
 {
