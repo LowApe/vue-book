@@ -12,7 +12,7 @@
     ],
     "latesetUpdated": [
         {
-            "id": 1,
+            "id": 3,
             "titile": "android1",
             "authors": [
                 "啊所达到",
@@ -22,7 +22,7 @@
             "img_url": "static/logo.png"
         },
         {
-            "id": 2,
+            "id": 4,
             "titile": "android2",
             "authors": [
                 "啊所达到",
@@ -32,7 +32,7 @@
             "img_url": "static/logo.png"
         },
         {
-            "id": 2,
+            "id": 5,
             "titile": "android3",
             "authors": [
                 "啊所达到",
@@ -44,7 +44,7 @@
     ],
     "recommended": [
         {
-            "id": 1,
+            "id": 6,
             "titile": "android1",
             "authors": [
                 "啊所达到",
@@ -54,7 +54,7 @@
             "img_url": "static/logo.png"
         },
         {
-            "id": 2,
+            "id": 7,
             "titile": "android2",
             "authors": [
                 "啊所达到",
@@ -64,7 +64,7 @@
             "img_url": "static/logo.png"
         },
         {
-            "id": 3,
+            "id": 8,
             "titile": "android3",
             "authors": [
                 "啊所达到",

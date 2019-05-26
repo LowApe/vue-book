@@ -14,7 +14,7 @@
           <div class="swiper-wrapper">
             <router-link class="swiper-slide"
               v-for="slide in slides"
-          v-bind:key="slide.id"
+              v-bind:key="slide.id"
              tag="div"
              :to="{name: 'BookDetails',params:{ id: slide.id}}">
               <img :src="slide.img_url"/>
@@ -22,7 +22,7 @@
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
-        </div>
+        </div><hr>
         <!-- 快讯 -->
         <div class="announcement">
           <label for="">快讯</label>
@@ -37,7 +37,7 @@
         heading="新书推荐"
         @onBookSelect="preview($event)"></book-list>
       </div>
-    </div>
+    </div><hr>
     <div class="section">
          <!-- 编辑推荐 -->
         <book-list :books="recommended"
@@ -85,7 +85,8 @@ export default {
     new Swiper(this.$refs.slider,{
       pagination: {
         el: '.swiper-pagination'
-      }
+      },
+      observer: true
     })
   }
 }
